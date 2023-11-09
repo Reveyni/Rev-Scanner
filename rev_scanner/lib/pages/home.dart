@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:rev_scanner/pages/barkod_tarama.dart';
+import 'package:rev_scanner/pages/belge_tarama.dart';
 import 'package:rev_scanner/pages/ocr_tarama.dart';
 
 import 'package:rev_scanner/pages/qr_tarama.dart';
@@ -18,7 +19,8 @@ class _HomePageState extends State<HomePage> {
    
     const QrTarama(),
     const BarkodTarama(),
-    const OcrTarama()
+    const OcrTarama(),
+    const BelgeTarama()
    
   ];
 
@@ -26,7 +28,7 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return DefaultTabController(
       
-      length: 3,
+      length: 4,
       child: Scaffold(
         
         appBar: AppBar(
@@ -37,13 +39,16 @@ class _HomePageState extends State<HomePage> {
             indicatorColor: Color(0xffffffff),
             tabs: [
               Tab(
-                text: 'QR Tarayıcı',
+                text: 'QR',
               ),
               Tab(
-                text: 'Barkod Tarayıcı',
+                text: 'Barkod',
               ),
               Tab(
-                text: 'OCR Tarayıcı' ,
+                text: 'OCR' ,
+              ),
+              Tab(
+                text: 'Belge' ,
               )
             ]),
         ),
